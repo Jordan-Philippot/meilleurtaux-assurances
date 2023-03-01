@@ -1,0 +1,71 @@
+// ----- 
+// Colors
+// ----- 
+$color-title-primary: #2846a6;
+$color-text-primary: #000000;
+$color-percent-euro: #f1a501;
+$color-percent-unit: #df6951;
+$color-bg-btn-success: #006400;
+$color-bg-primary: #ffffff;
+$color-bg-secondary: #fafbfd;
+
+// ----- 
+// Font family 
+// ----- 
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+$font-family-primary: "Nunito", sans-serif;
+
+// ----- 
+// Breakpoint values  
+// ----- 
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1500px;
+
+// ----- 
+// Smartphone
+// ----- 
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// ----- 
+// Medium devices
+// ----- 
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// ----- 
+// Large devices
+// ----- 
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+
+// ----- 
+// Extra large devices
+// ----- 
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// ----- 
+// Extra large devices
+// -----
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
+        @content;
+    }
+}

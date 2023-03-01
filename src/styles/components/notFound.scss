@@ -1,0 +1,14 @@
+#notFound {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 7vw;
+    }
+    p{
+        margin: 25px;
+        font-size: 26px;
+    }
+}

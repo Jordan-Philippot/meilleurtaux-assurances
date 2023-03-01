@@ -1,0 +1,127 @@
+// -----
+//  Tools
+// -----
+@import "./tools/globals.scss";
+@import "./tools/dataLoader.scss";
+
+// -----
+//  Components
+// -----
+@import "./components/header.scss";
+@import "./components/notFound.scss";
+//  ----- Homepage -----
+@import "./components/home/presentation.scss";
+@import "./components/home/offer.scss";
+
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.App {
+    text-align: center;
+    font-family: $font-family-primary;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.btn-default {
+    font-weight: bold;
+    border-radius: 16px;
+    border: none;
+    font-size: 15px;
+    padding: 17px 10px;
+    color: white;
+    display: inline-block;
+}
+.btn-primary {
+    background-color: $color-title-primary;
+    cursor: pointer;
+    &:hover {
+        background-color: #1c3a9d;
+    }
+}
+.btn-success {
+    background-color: $color-bg-btn-success;
+}
+
+.container-fluid {
+    background-color: $color-bg-secondary;
+    padding: 0 15px 40px 15px;
+    width: 100vw;
+    height: auto;
+}
+.error-container {
+    background-color: $color-percent-unit;
+    color: white;
+    border-radius: 20px;
+    width: 80vw;
+    max-width: 400px;
+    margin: auto;
+    padding: 25px;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+// -----
+// Media query
+// -----
+@include md {
+    .container-fluid {
+        padding: 20px 5vw;
+    }
+}
+@include xl {
+    .btn-default {
+        font-size: 16px;
+    }
+}
+
+@include xxl {
+    .container-fluid {
+        padding: 20px 15vw;
+    }
+}

@@ -1,0 +1,140 @@
+#presentation {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    text-align: left;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        padding: 18px 20px 15px 20px;
+
+        // -----
+        // Title
+        // -----
+        h1 {
+            color: $color-title-primary;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 26px;
+            b {
+                font-weight: 700;
+            }
+        }
+
+        // -----
+        // Description
+        // -----
+        ul {
+            list-style-type: circle;
+            padding-left: 25px;
+
+            li {
+                font-size: 26px;
+                // -----
+                // Bullet
+                // -----
+                &::marker {
+                    color: $color-title-primary;
+                }
+
+                // -----
+                // Text
+                // -----
+                span {
+                    font-size: 14px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    font-weight: 300;
+                    margin-bottom: 3px;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+    // -----
+    // Display illustrations only on desktop
+    // -----
+    #caracter-illustration {
+        display: none;
+        z-index: 2;
+    }
+
+    #cloud-illustration {
+        display: none;
+        z-index: 1;
+    }
+}
+
+// -----
+// Media query
+// -----
+@include md {
+    #presentation {
+        .text-container {
+            padding: 18px 10vw 15px 5vw;
+
+            // -----
+            // Wrap the end of sentence on md media
+            // -----
+            h1 b {
+                display: block;
+            }
+        }
+    }
+}
+@include xl {
+    #presentation {
+        .text-container {
+            padding: 52px 10vw 15px 5vw;
+
+            h1 {
+                font-size: 28px;
+                margin-bottom: 10px;
+                line-height: 1.4;
+            }
+            // -----
+            // Description
+            // -----
+            ul li {
+                font-size: 28px;
+                line-height: 1.1;
+
+                // -----
+                // Text
+                // -----
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        #caracter-illustration {
+            display: block;
+            position: relative;
+            min-width: 220px;
+            height: 210px;
+            background-image: url("../../../images/personnage.svg");
+            background-position: top;
+            background-size: 100%;
+            margin-top: auto;
+        }
+        #cloud-illustration {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 400px;
+            width: 30vw;
+            transform: translateY(-70px);
+            margin-left: auto;
+        }
+    }
+}
+@include xxl {
+    #presentation {
+        .text-container {
+            padding: 52px 10vw 15px 15vw;
+        }
+    }
+}

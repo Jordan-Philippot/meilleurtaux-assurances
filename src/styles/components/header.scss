@@ -1,0 +1,41 @@
+// -----
+// Media xs by default
+//  -----
+header {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    padding: 20px 20px 12px 20px;
+    box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.2);
+    background-color: $color-bg-primary;
+
+    #logo {
+        display: block;
+        width: 55vw;
+        max-width: 220px;
+        margin-right: auto;
+    }
+}
+
+// -----
+// Media query
+//  -----
+@include md {
+    header {
+        padding: 20px 10vw 15px 5vw;
+    }
+}
+@include xl {
+    header {
+        box-shadow: unset;
+    }
+}
+@include xxl {
+    header {
+        padding: 20px 15vw 5px 15vw;
+        #logo {
+            width: 225px;
+            max-width: unset;
+        }
+    }
+}
